@@ -1,0 +1,37 @@
+
+
+T=2;
+f=1/T;
+%1  %rezolutie temporara de 2ms                           
+t=0:0.002:2*T;
+y=-0.25+0.75*sq
+% se vor reprezenta grafic elementele vectorului y în funcţie de elementele vectorului t
+plot(t,y)
+%pana la ce valori vreau axa pe x si y
+axis([0 4 -1.2 0.6])
+title('Semnal dreptunghiular 2ms')
+%textul devine eticheta de pe abscisa
+xlabel('Timp (sec)')
+% textul devine eticheta de pe ordonata 
+ylabel('Amplitudine')
+grid
+%2 rezolutie temporala de 20ms
+t=0:0.02:10*T;   
+y=-0.25+0.75*square(f*2*pi*t,25);
+subplot (2,2,3) 
+plot(t,y)
+axis([0 10 -1.2 0.6])
+title('Semnal dreptunghiular 20ms')
+xlabel('Timp (sec)')
+ylabel('Amplitudine')
+grid
+%3 rezolutie temporala de 200ms
+t=0:0.2:10*T; 
+y=-0.25+0.75*square(f*2*pi*t,25);
+subplot (2,2,4) 
+plot(t,y)
+axis([0 10 -1.2 0.6])
+title('Semnal dreptunghiular 200ms')
+xlabel('Timp (sec)')
+ylabel('Amplitudine')
+grid
