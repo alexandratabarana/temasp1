@@ -1,0 +1,51 @@
+t=(0:1/1000:10); %intoduc datele folosite in problema
+A= 1.5;
+T=4;
+f=1/T;
+%scriu amplitudinea cu ajutorul unei functii trigonom directe
+y=A*sin(f*2*pi*t);
+figure
+subplot(2,2,1)
+plot(t,y)
+title('Semnal sinusoidal neredresat')
+%stabilesc coordonatele axelor
+xlabel('Timp')
+ylabel('Amplitudine')
+grid
+t=0:0.002:8*T;   
+y = 1.5*abs(sin(2*pi*f*t));
+subplot (2,2,2)
+plot(t,y)
+grid; 
+title('Semnal sinusoidal redresat 2ms')
+xlabel('Timp')
+ylabel('Amplitudine')
+axis([-0.2 10 -0.1 2]);
+t=0:0.02:8*T;   
+y = 1.5*abs(sin(2*pi*f*t));
+
+%divizam fereastra grafica
+%împarte fereastra grafică într-o matrice 
+subplot (2,2,3)
+% se vor reprezenta grafic elementele vectorului t în funcţie de elementele
+% vectorului y
+plot (t,y)
+grid;
+title('Semnal sinusoidal redresat 20ms') % plasează deasupra graficului, ca titlu, textul.
+xlabel('Timp')% textul devine eticheta de pe abscisa
+ylabel('Amplitudine') %extul devine eticheta de pe ordonata 
+%folosim axis pentru vizualizarea unei portiuni din grafic
+axis([-0.2 10 -0.1 2]);
+t=0:0.2:8*T;   
+y = 1.5*abs(sin(2*pi*f*t));
+subplot (2,2,4)
+% se vor reprezenta grafic elementele vectorului t în funcţie de elementele
+% vectorului y
+plot (t,y)
+grid;
+title('Semnal sinusoidal redresat 200ms')
+xlabel('Timp')
+ylabel('Amplitudine')
+axis([-0.2 10 -0.1 2]);
+clc
+ 

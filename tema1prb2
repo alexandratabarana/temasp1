@@ -1,0 +1,30 @@
+T=5
+f=1/T
+t=0:0.002:8*T;
+y=-0.5+1.5*sawtooth(2*pi*f*t,0.5);
+figure
+subplot(211)
+plot(t,y)
+axis([0 11 -2.5 1.5])
+xlabel('Timp (sec)')
+ylabel('Amplitudine')
+title('Semnal triunghiular periodic 2 s ')
+grid
+t=0:0.02:8*T;
+y=-0.5+1.5*sawtooth(2*pi*f*t,0.5);
+subplot(223)
+plot(t,y)
+axis([0 11 -2.5 1.5])
+xlabel('Timp (sec)')
+ylabel('Amplitudine')
+title('Semnal triunghiular periodic 20 s ')
+grid
+t=0:0.2:8*T;
+y=-0.5+1.5*sawtooth(2*pi*f*t,0.5);
+subplot(224)
+plot(t,y)
+axis([0 11 -2.5 1.5])
+xlabel('Timp (sec)')
+ylabel('Amplitudine')
+title('Semnal triunghiular periodic 20 s ')
+grid

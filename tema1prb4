@@ -1,0 +1,43 @@
+A= 0.8;
+T=3;
+f=1/T;
+t=0:1/100:6;
+y=A*sin(f*2*pi*t);
+figure
+subplot(2,2,1)
+plot(t,y)
+title('Semnal sinusoidal neredresat')
+xlabel('Timp')
+ylabel('Amplitudine')
+grid  
+
+t=0:0.002:4*T;   
+y = 0.4*(sin(2*pi*f*t)+abs(sin(2*pi*f*t)));
+subplot (2,2,2)
+plot(t,y)
+grid; 
+title('Semnal sinusoidal 2ms');
+xlabel('Timp')
+ylabel('Amplitudine')
+axis([-0.2 5.2 -0.2 1]);
+
+t=0:0.02:4*T;   
+y = 0.4*(sin(2*pi*f*t)+abs(sin(2*pi*f*t)));
+subplot (2,2,3)
+plot (t,y)
+grid;
+title('Semnal sinusoidal 20ms');
+xlabel('Timp')
+ylabel('Amplitudine')
+axis([-0.2 5.2 -0.2 1]);
+
+t=0:0.2:4*T;   
+y = 0.4*(sin(2*pi*f*t)+abs(sin(2*pi*f*t)));
+subplot (2,2,4)
+plot (t,y)
+grid;
+title('Semnal sinusoidal 200ms');
+xlabel('Timp')
+ylabel('Amplitudine')
+axis([-0.2 5.2 -0.2 1]);
+clc
